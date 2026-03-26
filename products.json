@@ -6,16 +6,16 @@
         "price": 450,
         "unit": "Piece",
         "img": "images/steel.jpg",
-        "desc": "Premium white ceramic toilet seat."
+        "desc": "Premium steel bars for construction."
     },
     {
         "id": 2,
         "name": "Steel Bars (Full Set)",
         "category": "Building Material",
-        "price": 3,600,
+        "price": 3600,
         "unit": "Set",
         "img": "images/steel 2.jpg",
-        "desc": "Complete two-piece toilet set with dual-flush system."
+        "desc": "Complete two-piece steel bars set."
     },
     {
         "id": 3,
