@@ -1,28 +1,28 @@
 [
     {
         "id": 1,
-        "name": "White Ceramic Toilet Seat",
-        "category": "Sanitary Ware",
-        "price": 320,
+        "name": "Steel Bars",
+        "category": "Building Material",
+        "price": 450,
         "unit": "Piece",
         "img": "images/steel.jpg",
         "desc": "Premium white ceramic toilet seat."
     },
     {
         "id": 2,
-        "name": "Premium White Toilet (Full Set)",
-        "category": "Sanitary Ware",
-        "price": 1850,
+        "name": "Seel Bars (Full Set)",
+        "category": "Building Material",
+        "price": 3,600,
         "unit": "Set",
         "img": "images/steel 2.jpg",
         "desc": "Complete two-piece toilet set with dual-flush system."
     },
     {
         "id": 3,
-        "name": "Portland Cement 50kg",
-        "category": "Cement & Concrete",
-        "price": 85,
-        "unit": "Bag",
+        "name": "Building Equipments",
+        "category": "Building Material",
+        "price": 500,
+        "unit": "Piece",
         "img": "images/steel 3.jpg",
         "desc": "42.5 grade Portland Cement for strong concrete."
     },
