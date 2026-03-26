@@ -25,7 +25,7 @@
 </head>
 <body class="bg-zinc-950 text-zinc-100">
 
-<!-- NAVBAR -->
+<!-- NAVBAR, HERO, BANNER, etc. (same as before) -->
 <nav class="bg-zinc-900 border-b border-zinc-800 sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4">
         <div class="flex items-center justify-between">
@@ -157,7 +157,7 @@
                     </div>
                 </div>
             </div>
-            <!-- You can add more testimonials here by copying the block above -->
+            <!-- Add more testimonials here later if you want -->
         </div>
     </div>
 </section>
@@ -224,7 +224,7 @@
 </a>
 
 <script>
-// ==================== Load Products from JSON (Easy to edit) ====================
+// Load products from JSON file - easy to update later
 let products = [];
 
 async function loadProducts() {
@@ -234,8 +234,8 @@ async function loadProducts() {
         renderFeatured();
         renderProducts(products);
     } catch (error) {
-        console.error("Could not load products.json", error);
-        alert("Products file not found. Please make sure products.json exists in the same folder.");
+        console.error("Could not load products:", error);
+        alert("Products file not found. Please make sure products.json exists.");
     }
 }
 
@@ -295,7 +295,7 @@ function navigateTo(section) {
     document.getElementById(section).scrollIntoView({ behavior: 'smooth' });
 }
 
-// Start the website
+// Start the site
 window.onload = () => {
     loadProducts();
 };
