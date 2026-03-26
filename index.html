@@ -12,7 +12,7 @@
         .heading-font { font-family: 'Space Grotesk', sans-serif; }
         .hero-bg {
             background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('images/steel.jpg') center/cover;
-            min-height: 85vh;   /* Changed from full screen */
+            min-height: 85vh;
         }
         .product-card:hover { transform: translateY(-8px); transition: all 0.3s ease; }
         .floating-whatsapp {
@@ -89,10 +89,6 @@
     ✅ We deliver anywhere in Zambia • Bulk orders welcome • Competitive rates
 </div>
 
-<!-- The rest of your sections (Featured, Shop, Why Choose Us, Testimonials, About, Contact, Footer) stay the same -->
-
-<!-- I kept all your original sections unchanged below -->
-
 <!-- FEATURED PRODUCTS -->
 <section class="py-16 bg-zinc-900">
     <div class="max-w-7xl mx-auto px-6">
@@ -151,7 +147,6 @@
     <div class="max-w-5xl mx-auto px-6">
         <h2 class="heading-font text-5xl tracking-tighter text-center mb-12">What Our Customers Say</h2>
         <div class="grid md:grid-cols-3 gap-8">
-            <!-- Your 3 testimonials remain here -->
             <div class="bg-zinc-900 p-8 rounded-3xl">
                 <p class="italic text-zinc-300">"Best prices and quality cement in Kabwe. They delivered 50 bags to my site the same day!"</p>
                 <div class="mt-6 flex items-center gap-3">
@@ -162,7 +157,7 @@
                     </div>
                 </div>
             </div>
-            <!-- ... other two testimonials stay the same ... -->
+            <!-- You can add more testimonials here by copying the block above -->
         </div>
     </div>
 </section>
@@ -229,23 +224,20 @@
 </a>
 
 <script>
-// ==================== PRODUCTS (with your 3 steel images) ====================
-let products = [
-    { id: 1, name: "White Ceramic Toilet Seat", category: "Sanitary Ware", price: 320, unit: "Piece", img: "images/steel.jpg", desc: "Premium white ceramic toilet seat." },
-    { id: 2, name: "Premium White Toilet (Full Set)", category: "Sanitary Ware", price: 1850, unit: "Set", img: "images/steel 2.jpg", desc: "Complete two-piece toilet set with dual-flush system." },
-    { id: 3, name: "Portland Cement 50kg", category: "Cement & Concrete", price: 85, unit: "Bag", img: "images/steel 3.jpg", desc: "42.5 grade Portland Cement for strong concrete." },
-    { id: 4, name: "12mm Steel Rebar (12m)", category: "Steel & Reinforcement", price: 135, unit: "Length", img: "images/steel.jpg", desc: "High tensile deformed rebar." },
-    { id: 5, name: "Corrugated Zinc Roofing Sheets", category: "Roofing", price: 245, unit: "Sheet", img: "images/steel 2.jpg", desc: "Galvanized roofing sheets." },
-    { id: 6, name: "MDF Board 4ft x 8ft (12mm)", category: "Wood & Boards", price: 295, unit: "Sheet", img: "images/steel 3.jpg", desc: "Smooth MDF board." },
-    { id: 7, name: "Ceramic Floor Tiles (60x60cm)", category: "Tiles & Flooring", price: 420, unit: "Box (4 pcs)", img: "images/steel.jpg", desc: "Durable glossy tiles." },
-    { id: 8, name: "PVC Plumbing Pipes & Fittings", category: "Plumbing", price: 95, unit: "Bundle", img: "images/steel 2.jpg", desc: "High-pressure PVC pipes." },
-    { id: 9, name: "Emulsion Paint 20L", category: "Paints", price: 650, unit: "Bucket", img: "images/steel 3.jpg", desc: "High-quality emulsion paint." },
-    { id: 10, name: "Common Wire Nails (2kg pack)", category: "Fasteners", price: 85, unit: "Pack", img: "images/steel.jpg", desc: "Assorted construction nails." },
-    { id: 11, name: "River Sand (Tipper)", category: "Aggregates", price: 850, unit: "Tipper", img: "images/steel 2.jpg", desc: "Clean river sand." },
-    { id: 12, name: "Electrical PVC Conduit Pipes", category: "Electrical", price: 120, unit: "Bundle", img: "images/steel 3.jpg", desc: "PVC conduit pipes." },
-    { id: 13, name: "Steel Door Frame (Standard)", category: "Doors & Windows", price: 1450, unit: "Piece", img: "images/steel.jpg", desc: "Heavy duty metal door frame." },
-    { id: 14, name: "Concrete Blocks (6-inch)", category: "Blocks & Bricks", price: 12, unit: "Piece", img: "images/steel 2.jpg", desc: "High-strength concrete blocks." }
-];
+// ==================== Load Products from JSON (Easy to edit) ====================
+let products = [];
+
+async function loadProducts() {
+    try {
+        const response = await fetch('products.json');
+        products = await response.json();
+        renderFeatured();
+        renderProducts(products);
+    } catch (error) {
+        console.error("Could not load products.json", error);
+        alert("Products file not found. Please make sure products.json exists in the same folder.");
+    }
+}
 
 function renderProducts(filtered = products, containerId = 'product-grid') {
     const grid = document.getElementById(containerId);
@@ -281,7 +273,7 @@ function renderFeatured() {
 function filterProducts() {
     const term = (document.getElementById('search-input').value || document.getElementById('search-input-mobile').value || "").toLowerCase().trim();
     if (!term) return renderProducts(products);
-    const filtered = products.filter(p => 
+    const filtered = products.filter(p =>
         p.name.toLowerCase().includes(term) || p.category.toLowerCase().includes(term)
     );
     renderProducts(filtered);
@@ -303,10 +295,9 @@ function navigateTo(section) {
     document.getElementById(section).scrollIntoView({ behavior: 'smooth' });
 }
 
-// Initialize
+// Start the website
 window.onload = () => {
-    renderFeatured();
-    renderProducts(products);
+    loadProducts();
 };
 </script>
 </body>
