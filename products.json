@@ -10,7 +10,7 @@
     },
     {
         "id": 2,
-        "name": "Seel Bars (Full Set)",
+        "name": "Steel Bars (Full Set)",
         "category": "Building Material",
         "price": 3,600,
         "unit": "Set",
@@ -28,38 +28,38 @@
     },
     {
         "id": 4,
-        "name": "12mm Steel Rebar (12m)",
+        "name": "Gear Set (1)",
         "category": "Steel & Reinforcement",
         "price": 135,
         "unit": "Length",
-        "img": "images/steel.jpg",
+        "img": "images/gear.jpg",
         "desc": "High tensile deformed rebar."
     },
     {
         "id": 5,
-        "name": "Corrugated Zinc Roofing Sheets",
+        "name": "Gear Set (Two)",
         "category": "Roofing",
         "price": 245,
         "unit": "Sheet",
-        "img": "images/steel 2.jpg",
+        "img": "images/gear 2.jpg",
         "desc": "Galvanized roofing sheets."
     },
     {
         "id": 6,
-        "name": "MDF Board 4ft x 8ft (12mm)",
+        "name": "Gear Set (Three)",
         "category": "Wood & Boards",
         "price": 295,
         "unit": "Sheet",
-        "img": "images/steel 3.jpg",
+        "img": "images/gear 3.jpg",
         "desc": "Smooth MDF board."
     },
     {
         "id": 7,
-        "name": "Ceramic Floor Tiles (60x60cm)",
+        "name": "Building Wires (60x60cm)",
         "category": "Tiles & Flooring",
         "price": 420,
-        "unit": "Box (4 pcs)",
-        "img": "images/steel.jpg",
+        "unit": "Box (200m)",
+        "img": "images/wire.jpg",
         "desc": "Durable glossy tiles."
     },
     {
