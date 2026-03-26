@@ -64,11 +64,11 @@
     },
     {
         "id": 8,
-        "name": "PVC Plumbing Pipes & Fittings",
-        "category": "Plumbing",
+        "name": "Simple Building Set",
+        "category": "Universal Building Equipments",
         "price": 95,
         "unit": "Bundle",
-        "img": "images/steel 2.jpg",
+        "img": "images/utilities.jpg",
         "desc": "High-pressure PVC pipes."
     },
     {
